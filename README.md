@@ -12,5 +12,3 @@ Tестовая задача на позицию front-end developer в комп
 #### Start
 
 `npm run storybook`
-
-Страница откроется в браузере. Дальше слева в панели найдите `Common/TestApp/Regular`
