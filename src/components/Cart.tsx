@@ -3,7 +3,13 @@ import List from './List';
 import '../styles/index.scss';
 import { currency } from '../store';
 
-class TestApp extends Component <any, any> {
+interface InitialState {
+  selectedItem: number,
+  unit: number,
+  id: null | number | string,
+}
+
+class TestApp extends Component < any, InitialState > {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -13,18 +19,22 @@ class TestApp extends Component <any, any> {
     };
   }
 
-  handleSelect = (value: any, unit: any, id: any) => {
+  handleSelect = (value: number, unit: number, id: null | number | string) => {
     this.setState({
       selectedItem: value,
       unit: unit,
       id: id
     });
   }
+
   onSubmit = () => {
-      alert (`Сума: ${this.state.selectedItem} Вага: ${this.state.unit}`);
+    const { selectedItem, unit } = this.state;
+
+    alert (`Сума: ${selectedItem} Вага: ${unit}`);
   }
 
   render() {
+    const { selectedItem, id } = this.state;
     return (
       <form className="cart"
           onSubmit={this.onSubmit}
@@ -34,10 +44,10 @@ class TestApp extends Component <any, any> {
           <span className="cart-head__price">Ціна</span>
         </div>
         <List handleSelect={this.handleSelect}
-          id={this.state.id}
+          id={id}
         />
         <div className="cart-foot">
-          <span className="cart-foot__sum">{this.state.selectedItem} {currency}</span>
+          <span className="cart-foot__sum">{selectedItem} {currency}</span>
           <button className="cart-foot__btn"
               type="submit"
           ><img src="https://raw.githubusercontent.com/DiOlllIV/front-end-developer-test-task/master/src/styles/icon-cart.png" alt="icon-basket"/> До кошика</button>
