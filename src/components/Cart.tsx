@@ -9,13 +9,15 @@ class TestApp extends Component <any, any> {
       this.state = {
         selectedItem: 0,
         unit: 0,
+        id: null,
       };
     }
   
-    handleSelect = (value: any, unit: any) => {
+    handleSelect = (value: any, unit: any, id: any) => {
       this.setState({
         selectedItem: value,
         unit: unit,
+        id: id
       });
     }
 
@@ -34,6 +36,7 @@ class TestApp extends Component <any, any> {
           </div>
           <List handleSelect={this.handleSelect}
             cliked={this.state.cliked}
+            id={this.state.id}
           />
           <div className="cart-foot">
             <span className="cart-foot__sum">{this.state.selectedItem} {currency}</span>
