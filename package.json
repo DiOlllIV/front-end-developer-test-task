@@ -1,7 +1,7 @@
 {
   "name": "daoua-front-end-developer-test-task",
   "version": "1.0.0",
-  "description": "",
+  "description": "Это ваша тестовая задача на позицию front-end developer в компании DAO.\r Необходимо сверстать небольшой виджет переключения цены и добавления товара в корзину.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -29,8 +29,14 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.1",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.10.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.3",
     "ts-loader": "^8.0.2",
     "tslint": "^6.1.3",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "url-loader": "^4.1.0"
   }
 }
