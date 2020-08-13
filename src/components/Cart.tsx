@@ -34,7 +34,6 @@ class TestApp extends Component <any, any> {
           <span className="cart-head__price">Ціна</span>
         </div>
         <List handleSelect={this.handleSelect}
-          cliked={this.state.cliked}
           id={this.state.id}
         />
         <div className="cart-foot">
