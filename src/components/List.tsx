@@ -7,7 +7,7 @@ function List(props: any) {
       {
         itemsData.map((item: any) => {
           const itemClass = (props.id === item.id) ?
-          "cart-list__item selected" : "cart-list__item";   
+          "cart-list__item selected" : "cart-list__item"   
 
           return ( 
            <li className={itemClass}
